@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jadwal Les</title>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4 min-h-screen">
+
+  <header class="mb-6 text-center">
+    <h1 class="text-3xl font-bold text-blue-700">Aplikasi Jadwal Les</h1>
+    <p class="text-gray-700">Kelola jadwal belajar dan absensi siswa</p>
+  </header>
+
+  <main class="max-w-7xl mx-auto bg-white p-6 rounded shadow">
+
+    <!-- Tabel Jadwal Utama -->
+    <section id="mainScheduleSection" class="mb-10">
+      <h2 class="text-xl font-semibold mb-3">Jadwal Utama</h2>
+      <div class="overflow-auto max-w-full">
+        <table id="mainSchedule" class="border border-gray-300 w-full table-auto text-center">
+          <!-- Header & body diisi JS -->
+        </table>
+      </div>
+    </section>
+
+    <!-- Tabel Jadwal per Siswa -->
+    <section id="studentScheduleSection" class="mb-10">
+      <h2 class="text-xl font-semibold mb-3">Jadwal Per Siswa</h2>
+      <button id="addStudentBtn" class="mb-3 bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
+        + Tambah Siswa
+      </button>
+      <div class="overflow-auto max-w-full">
+        <table id="studentTable" class="border border-gray-300 w-full table-auto text-center">
+          <!-- Header & body diisi JS -->
+        </table>
+      </div>
+    </section>
+
+    <!-- Tabel Kesimpulan -->
+    <section id="summarySection">
+      <h2 class="text-xl font-semibold mb-3">Kesimpulan Jadwal Siswa</h2>
+      <div class="overflow-auto max-w-full">
+        <table id="summaryTable" class="border border-gray-300 w-full table-auto text-left">
+          <!-- Header & body diisi JS -->
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
